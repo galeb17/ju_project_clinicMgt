@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "medicineType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitOfMeasurement",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "generic",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180115125746",
+    "dto": "no",
+    "entityTableName": "expense_edit_log",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

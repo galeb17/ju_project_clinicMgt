@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "charge",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "received",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },{
+            "fieldName": "balance",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180115140853",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "treat_bill",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

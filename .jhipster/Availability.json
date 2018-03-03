@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "fields": [
+        {
+            "fieldName": "wards",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bedCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bedNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "reserved",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "Charge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "male,female"
+        }
+    ],
+    "changelogDate": "20180114165746",
+    "dto": "no",
+    "entityTableName": "availability",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

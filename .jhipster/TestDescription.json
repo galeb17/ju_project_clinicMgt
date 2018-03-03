@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships" :[],
+    "fields": [
+
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "charge",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20181114165946",
+    "dto": "no",
+    "entityTableName": "test_description",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

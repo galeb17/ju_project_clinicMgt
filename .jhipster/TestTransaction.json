@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "treatment ",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cause",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "charge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "received",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "balance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "refDoctor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatNo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "testReport",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180115165746",
+    "dto": "no",
+    "entityTableName": "testTransaction",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

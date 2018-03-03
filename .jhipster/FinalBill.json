@@ -1,0 +1,61 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        }
+    ],
+    "fields": [
+
+        {
+            "fieldName": "billNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatmentCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "treatmentReceived",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treatmentBalance",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "bedCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "nursingCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "medicineCharge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "doctorVisit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "operation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "Date",
+            "fieldType": "Date"
+        }
+    ],
+    "changelogDate": "20171114125746",
+    "dto": "no",
+    "entityTableName": "final_bill",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

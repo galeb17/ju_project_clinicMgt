@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "bed_Code",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "bed_No",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "entry_Type",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "discharge_Status",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "discharge_Date",
+            "fieldType": "Date",
+            "fieldValidateRules": []
+        },{
+            "fieldName": "admission_Date",
+            "fieldType": "Date",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "male,female",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "contactNo",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171115140653",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "patient",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

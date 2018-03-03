@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        },
+        {
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        }
+    ],
+    "fields": [
+
+        {
+            "fieldName": "scheduleDate",
+            "fieldType": "Date"
+        },
+        {
+            "fieldName": "scheduleTime",
+            "fieldType": "Date"
+        }
+    ],
+    "changelogDate": "20180115125746",
+    "dto": "no",
+    "entityTableName": "appoint_schedule",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

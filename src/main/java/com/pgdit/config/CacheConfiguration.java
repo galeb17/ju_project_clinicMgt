@@ -43,6 +43,19 @@ public class CacheConfiguration {
             cm.createCache(com.pgdit.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.pgdit.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.pgdit.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Patient.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Doctor.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Contact.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.AppointSchedule.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Availability.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.FinalBill.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Medicine.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Prescription.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.TestDescription.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.TestTransaction.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.TransferIntimation.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.TreatBill.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.ClinicalTest.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

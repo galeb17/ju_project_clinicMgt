@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        }
+    ],
+    "fields": [
+
+        {
+            "fieldName": "refDoctor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fromBedCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "fromBedNo",
+            "fieldType": "Integer"
+        },{
+            "fieldName": "toBedCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "toBedNo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charge",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180114125746",
+    "dto": "no",
+    "entityTableName": "transferInformation",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

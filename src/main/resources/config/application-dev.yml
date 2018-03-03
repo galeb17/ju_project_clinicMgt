@@ -26,9 +26,9 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/Clinic?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://localhost:3306/Clinic_ju?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
-        password:
+        password: root
         hikari:
             data-source-properties:
                 cachePrepStmts: true
@@ -76,7 +76,7 @@ liquibase:
 #        keyAlias: Clinic
 # ===================================================================
 server:
-    port: 8080
+    port: 8070
 
 # ===================================================================
 # JHipster specific properties

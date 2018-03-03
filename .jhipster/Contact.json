@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+
+    "fields": [
+
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180114165746",
+    "dto": "no",
+    "entityTableName": "contact",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

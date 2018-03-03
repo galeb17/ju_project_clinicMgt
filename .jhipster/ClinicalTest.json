@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name ",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "testType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "preRequisite",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "caution",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180115165746",
+    "dto": "no",
+    "entityTableName": "clinical_test",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

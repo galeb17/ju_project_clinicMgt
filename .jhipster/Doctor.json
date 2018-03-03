@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "male,female",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "contactNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "department",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "consult_fee",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180115140753",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "doctor",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}

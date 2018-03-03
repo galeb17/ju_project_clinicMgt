@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "patient"
+        },
+        {
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipName": "medicine",
+            "otherEntityName": "medicine",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "medicine"
+        }
+    ],
+    "fields": [
+
+        {
+            "fieldName": "days",
+            "fieldType": "Integer"
+        },{
+            "fieldName": "time",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remarks",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180115125746",
+    "dto": "no",
+    "entityTableName": "expenditure",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pager"
+}
