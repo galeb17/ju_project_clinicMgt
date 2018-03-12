@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Treat Bill</span> {{vm.treatBill.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Charge</span></dt>
+        <dd>
+            <span>{{vm.treatBill.charge}}</span>
+        </dd>
+        <dt><span>Received</span></dt>
+        <dd>
+            <span>{{vm.treatBill.received}}</span>
+        </dd>
+        <dt><span>Balance</span></dt>
+        <dd>
+            <span>{{vm.treatBill.balance}}</span>
+        </dd>
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.treatBill.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.treatBill.patient.id})">{{vm.treatBill.patient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="treat-bill-detail.edit({id:vm.treatBill.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

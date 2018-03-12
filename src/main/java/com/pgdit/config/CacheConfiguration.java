@@ -56,6 +56,7 @@ public class CacheConfiguration {
             cm.createCache(com.pgdit.domain.TransferIntimation.class.getName(), jcacheConfiguration);
             cm.createCache(com.pgdit.domain.TreatBill.class.getName(), jcacheConfiguration);
             cm.createCache(com.pgdit.domain.ClinicalTest.class.getName(), jcacheConfiguration);
+            cm.createCache(com.pgdit.domain.Firoj.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

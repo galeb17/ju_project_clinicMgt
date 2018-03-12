@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Prescription</span> {{vm.prescription.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Days</span></dt>
+        <dd>
+            <span>{{vm.prescription.days}}</span>
+        </dd>
+        <dt><span>Time</span></dt>
+        <dd>
+            <span>{{vm.prescription.time}}</span>
+        </dd>
+        <dt><span>Remarks</span></dt>
+        <dd>
+            <span>{{vm.prescription.remarks}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.prescription.patient.id})">{{vm.prescription.patient.id}}</a>
+        </dd>
+        <dt><span>Doctor</span></dt>
+        <dd>
+            <a ui-sref="doctor-detail({id:vm.prescription.doctor.id})">{{vm.prescription.doctor.id}}</a>
+        </dd>
+        <dt><span>Medicine</span></dt>
+        <dd>
+            <a ui-sref="medicine-detail({id:vm.prescription.medicine.id})">{{vm.prescription.medicine.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="prescription-detail.edit({id:vm.prescription.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

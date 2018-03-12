@@ -4,26 +4,27 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171115140653_added_entity_Patient.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115140753_added_entity_Doctor.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180114165746_added_entity_Contact.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115125746_added_entity_AppointSchedule.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180114165746_added_entity_Availability.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171114125746_added_entity_FinalBill.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115125746_added_entity_Medicine.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115125746_added_entity_Prescription.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20181114165946_added_entity_TestDescription.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115165746_added_entity_TestTransaction.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180114125746_added_entity_TransferIntimation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115140853_added_entity_TreatBill.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115165746_added_entity_ClinicalTest.xml" relativeToChangelogFile="false"/>
-    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20180115125746_added_entity_constraints_AppointSchedule.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171114125746_added_entity_constraints_FinalBill.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115125746_added_entity_constraints_Prescription.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115165746_added_entity_constraints_TestTransaction.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180114125746_added_entity_constraints_TransferIntimation.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20180115140853_added_entity_constraints_TreatBill.xml" relativeToChangelogFile="false"/>
-    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!--<include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20171115140653_added_entity_Patient.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115140753_added_entity_Doctor.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180114165746_added_entity_Contact.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115125746_added_entity_AppointSchedule.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180114165746_added_entity_Availability.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20171114125746_added_entity_FinalBill.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115125746_added_entity_Medicine.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115125746_added_entity_Prescription.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20181114165946_added_entity_TestDescription.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115165746_added_entity_TestTransaction.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180114125746_added_entity_TransferIntimation.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115140853_added_entity_TreatBill.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115165746_added_entity_ClinicalTest.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180303110329_added_entity_Firoj.xml" relativeToChangelogFile="false"/>-->
+    <!--&lt;!&ndash; jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here &ndash;&gt;-->
+    <!--<include file="config/liquibase/changelog/20180115125746_added_entity_constraints_AppointSchedule.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20171114125746_added_entity_constraints_FinalBill.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115125746_added_entity_constraints_Prescription.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115165746_added_entity_constraints_TestTransaction.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180114125746_added_entity_constraints_TransferIntimation.xml" relativeToChangelogFile="false"/>-->
+    <!--<include file="config/liquibase/changelog/20180115140853_added_entity_constraints_TreatBill.xml" relativeToChangelogFile="false"/>-->
+    <!--&lt;!&ndash; jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here &ndash;&gt;-->
 </databaseChangeLog>

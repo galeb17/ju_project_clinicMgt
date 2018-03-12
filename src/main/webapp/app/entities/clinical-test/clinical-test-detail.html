@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Clinical Test</span> {{vm.clinicalTest.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Name</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.name }}</span>
+        </dd>
+        <dt><span>Test Type</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.testType}}</span>
+        </dd>
+        <dt><span>Rate</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.rate}}</span>
+        </dd>
+        <dt><span>Pre Requisite</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.preRequisite}}</span>
+        </dd>
+        <dt><span>Caution</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.caution}}</span>
+        </dd>
+        <dt><span>Is Active</span></dt>
+        <dd>
+            <span>{{vm.clinicalTest.isActive}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="clinical-test-detail.edit({id:vm.clinicalTest.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

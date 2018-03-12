@@ -1,0 +1,61 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClinicalTestLabel">Create or edit a Clinical Test</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.clinicalTest.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.clinicalTest.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name ">Name</label>
+            <input type="text" class="form-control" name="name " id="field_name "
+                    ng-model="vm.clinicalTest.name "
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_testType">Test Type</label>
+            <input type="text" class="form-control" name="testType" id="field_testType"
+                    ng-model="vm.clinicalTest.testType"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_rate">Rate</label>
+            <input type="number" class="form-control" name="rate" id="field_rate"
+                    ng-model="vm.clinicalTest.rate"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_preRequisite">Pre Requisite</label>
+            <input type="text" class="form-control" name="preRequisite" id="field_preRequisite"
+                    ng-model="vm.clinicalTest.preRequisite"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_caution">Caution</label>
+            <input type="text" class="form-control" name="caution" id="field_caution"
+                    ng-model="vm.clinicalTest.caution"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_isActive">Is Active</label>
+                <input type="checkbox" name="isActive" id="field_isActive"
+                          ng-model="vm.clinicalTest.isActive"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

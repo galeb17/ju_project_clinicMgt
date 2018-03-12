@@ -1,0 +1,90 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTreatBillLabel">Create or edit a Treat Bill</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.treatBill.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.treatBill.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_charge">Charge</label>
+            <input type="number" class="form-control" name="charge" id="field_charge"
+                    ng-model="vm.treatBill.charge"
+                    required/>
+            <div ng-show="editForm.charge.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.charge.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.charge.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_received">Received</label>
+            <input type="number" class="form-control" name="received" id="field_received"
+                    ng-model="vm.treatBill.received"
+                    required/>
+            <div ng-show="editForm.received.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.received.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.received.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_balance">Balance</label>
+            <input type="number" class="form-control" name="balance" id="field_balance"
+                    ng-model="vm.treatBill.balance"
+                    required/>
+            <div ng-show="editForm.balance.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.balance.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.balance.$error.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_date">Date</label>
+                <div class="input-group">
+                    <input id="field_date" type="text" class="form-control" name="date" uib-datepicker-popup="{{dateformat}}" ng-model="vm.treatBill.date" is-open="vm.datePickerOpenStatus.date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_patient">Patient</label>
+            <select class="form-control" id="field_patient" name="patient" ng-model="vm.treatBill.patient" ng-options="patient as patient.id for patient in vm.patients track by patient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

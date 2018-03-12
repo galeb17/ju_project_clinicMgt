@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span>Availability</span> {{vm.availability.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Wards</span></dt>
+        <dd>
+            <span>{{vm.availability.wards}}</span>
+        </dd>
+        <dt><span>Bed Code</span></dt>
+        <dd>
+            <span>{{vm.availability.bedCode}}</span>
+        </dd>
+        <dt><span>Bed No</span></dt>
+        <dd>
+            <span>{{vm.availability.bedNo}}</span>
+        </dd>
+        <dt><span>Reserved</span></dt>
+        <dd>
+            <span>{{vm.availability.reserved}}</span>
+        </dd>
+        <dt><span>Charge</span></dt>
+        <dd>
+            <span>{{vm.availability.Charge}}</span>
+        </dd>
+        <dt><span>Gender</span></dt>
+        <dd>
+            <span>{{vm.availability.gender}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="availability-detail.edit({id:vm.availability.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

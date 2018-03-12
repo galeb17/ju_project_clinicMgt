@@ -1,0 +1,82 @@
+<div>
+    <h2>Final Bills</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="final-bill.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Final Bill
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="billNo"><span>Bill No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="treatmentCharge"><span>Treatment Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="treatmentReceived"><span>Treatment Received</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="treatmentBalance"><span>Treatment Balance</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bedCharge"><span>Bed Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nursingCharge"><span>Nursing Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="medicineCharge"><span>Medicine Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorVisit"><span>Doctor Visit</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="operation"><span>Operation</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="Date"><span>Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="patient.id"><span>Patient</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="finalBill in vm.finalBills track by finalBill.id">
+                    <td><a ui-sref="final-bill-detail({id:finalBill.id})">{{finalBill.id}}</a></td>
+                    <td>{{finalBill.billNo}}</td>
+                    <td>{{finalBill.treatmentCharge}}</td>
+                    <td>{{finalBill.treatmentReceived}}</td>
+                    <td>{{finalBill.treatmentBalance}}</td>
+                    <td>{{finalBill.bedCharge}}</td>
+                    <td>{{finalBill.nursingCharge}}</td>
+                    <td>{{finalBill.medicineCharge}}</td>
+                    <td>{{finalBill.doctorVisit}}</td>
+                    <td>{{finalBill.operation}}</td>
+                    <td>{{finalBill.Date | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="patient-detail({id:finalBill.patient.id})">{{finalBill.patient.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="final-bill-detail({id:finalBill.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="final-bill.edit({id:finalBill.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="final-bill.delete({id:finalBill.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

@@ -1,0 +1,78 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTransferIntimationLabel">Create or edit a Transfer Intimation</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.transferIntimation.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.transferIntimation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_refDoctor">Ref Doctor</label>
+            <input type="text" class="form-control" name="refDoctor" id="field_refDoctor"
+                    ng-model="vm.transferIntimation.refDoctor"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_fromBedCode">From Bed Code</label>
+            <input type="number" class="form-control" name="fromBedCode" id="field_fromBedCode"
+                    ng-model="vm.transferIntimation.fromBedCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_fromBedNo">From Bed No</label>
+            <input type="number" class="form-control" name="fromBedNo" id="field_fromBedNo"
+                    ng-model="vm.transferIntimation.fromBedNo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_toBedCode">To Bed Code</label>
+            <input type="number" class="form-control" name="toBedCode" id="field_toBedCode"
+                    ng-model="vm.transferIntimation.toBedCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_toBedNo">To Bed No</label>
+            <input type="number" class="form-control" name="toBedNo" id="field_toBedNo"
+                    ng-model="vm.transferIntimation.toBedNo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_charge">Charge</label>
+            <input type="number" class="form-control" name="charge" id="field_charge"
+                    ng-model="vm.transferIntimation.charge"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_date">Date</label>
+                <div class="input-group">
+                    <input id="field_date" type="text" class="form-control" name="date" uib-datepicker-popup="{{dateformat}}" ng-model="vm.transferIntimation.date" is-open="vm.datePickerOpenStatus.date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_patient">Patient</label>
+            <select class="form-control" id="field_patient" name="patient" ng-model="vm.transferIntimation.patient" ng-options="patient as patient.id for patient in vm.patients track by patient.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

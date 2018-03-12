@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span>Test Transaction</span> {{vm.testTransaction.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Treatment</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.treatment }}</span>
+        </dd>
+        <dt><span>Cause</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.cause}}</span>
+        </dd>
+        <dt><span>Charge</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.charge}}</span>
+        </dd>
+        <dt><span>Received</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.received}}</span>
+        </dd>
+        <dt><span>Balance</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.balance}}</span>
+        </dd>
+        <dt><span>Ref Doctor</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.refDoctor}}</span>
+        </dd>
+        <dt><span>Treat No</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.treatNo}}</span>
+        </dd>
+        <dt><span>Test Report</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.testReport}}</span>
+        </dd>
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.testTransaction.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.testTransaction.patient.id})">{{vm.testTransaction.patient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="test-transaction-detail.edit({id:vm.testTransaction.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

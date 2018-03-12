@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Transfer Intimation</span> {{vm.transferIntimation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Ref Doctor</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.refDoctor}}</span>
+        </dd>
+        <dt><span>From Bed Code</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.fromBedCode}}</span>
+        </dd>
+        <dt><span>From Bed No</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.fromBedNo}}</span>
+        </dd>
+        <dt><span>To Bed Code</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.toBedCode}}</span>
+        </dd>
+        <dt><span>To Bed No</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.toBedNo}}</span>
+        </dd>
+        <dt><span>Charge</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.charge}}</span>
+        </dd>
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.transferIntimation.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.transferIntimation.patient.id})">{{vm.transferIntimation.patient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="transfer-intimation-detail.edit({id:vm.transferIntimation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

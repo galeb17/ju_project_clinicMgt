@@ -1,0 +1,80 @@
+<div>
+    <h2>Patients</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="patient.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Patient
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span>Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bed_Code"><span>Bed Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="bed_No"><span>Bed No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="entry_Type"><span>Entry Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="discharge_Status"><span>Discharge Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="discharge_Date"><span>Discharge Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="admission_Date"><span>Admission Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address"><span>Address</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="gender"><span>Gender</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="age"><span>Age</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contactNo"><span>Contact No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="patient in vm.patients track by patient.id">
+                    <td><a ui-sref="patient-detail({id:patient.id})">{{patient.id}}</a></td>
+                    <td>{{patient.name}}</td>
+                    <td>{{patient.bed_Code}}</td>
+                    <td>{{patient.bed_No}}</td>
+                    <td>{{patient.entry_Type}}</td>
+                    <td>{{patient.discharge_Status}}</td>
+                    <td>{{patient.discharge_Date | date:'medium'}}</td>
+                    <td>{{patient.admission_Date | date:'medium'}}</td>
+                    <td>{{patient.address}}</td>
+                    <td>{{patient.gender}}</td>
+                    <td>{{patient.age}}</td>
+                    <td>{{patient.contactNo}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="patient-detail({id:patient.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="patient.edit({id:patient.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="patient.delete({id:patient.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

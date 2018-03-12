@@ -1,0 +1,101 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPatientLabel">Create or edit a Patient</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.patient.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.patient.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.patient.name"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bed_Code">Bed Code</label>
+            <input type="text" class="form-control" name="bed_Code" id="field_bed_Code"
+                    ng-model="vm.patient.bed_Code"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_bed_No">Bed No</label>
+            <input type="text" class="form-control" name="bed_No" id="field_bed_No"
+                    ng-model="vm.patient.bed_No"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_entry_Type">Entry Type</label>
+            <input type="text" class="form-control" name="entry_Type" id="field_entry_Type"
+                    ng-model="vm.patient.entry_Type"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_discharge_Status">Discharge Status</label>
+            <input type="text" class="form-control" name="discharge_Status" id="field_discharge_Status"
+                    ng-model="vm.patient.discharge_Status"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_discharge_Date">Discharge Date</label>
+                <div class="input-group">
+                    <input id="field_discharge_Date" type="text" class="form-control" name="discharge_Date" datetime-picker="{{dateformat}}" ng-model="vm.patient.discharge_Date" is-open="vm.datePickerOpenStatus.discharge_Date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('discharge_Date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_admission_Date">Admission Date</label>
+                <div class="input-group">
+                    <input id="field_admission_Date" type="text" class="form-control" name="admission_Date" datetime-picker="{{dateformat}}" ng-model="vm.patient.admission_Date" is-open="vm.datePickerOpenStatus.admission_Date"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('admission_Date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.patient.address"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_gender">Gender</label>
+            <select class="form-control" name="gender" ng-model="vm.patient.gender" id="field_gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_age">Age</label>
+            <input type="number" class="form-control" name="age" id="field_age"
+                    ng-model="vm.patient.age"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_contactNo">Contact No</label>
+            <input type="text" class="form-control" name="contactNo" id="field_contactNo"
+                    ng-model="vm.patient.contactNo"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

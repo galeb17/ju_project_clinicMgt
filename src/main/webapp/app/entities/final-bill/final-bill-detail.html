@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Final Bill</span> {{vm.finalBill.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Bill No</span></dt>
+        <dd>
+            <span>{{vm.finalBill.billNo}}</span>
+        </dd>
+        <dt><span>Treatment Charge</span></dt>
+        <dd>
+            <span>{{vm.finalBill.treatmentCharge}}</span>
+        </dd>
+        <dt><span>Treatment Received</span></dt>
+        <dd>
+            <span>{{vm.finalBill.treatmentReceived}}</span>
+        </dd>
+        <dt><span>Treatment Balance</span></dt>
+        <dd>
+            <span>{{vm.finalBill.treatmentBalance}}</span>
+        </dd>
+        <dt><span>Bed Charge</span></dt>
+        <dd>
+            <span>{{vm.finalBill.bedCharge}}</span>
+        </dd>
+        <dt><span>Nursing Charge</span></dt>
+        <dd>
+            <span>{{vm.finalBill.nursingCharge}}</span>
+        </dd>
+        <dt><span>Medicine Charge</span></dt>
+        <dd>
+            <span>{{vm.finalBill.medicineCharge}}</span>
+        </dd>
+        <dt><span>Doctor Visit</span></dt>
+        <dd>
+            <span>{{vm.finalBill.doctorVisit}}</span>
+        </dd>
+        <dt><span>Operation</span></dt>
+        <dd>
+            <span>{{vm.finalBill.operation}}</span>
+        </dd>
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.finalBill.Date | date:'medium'}}</span>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.finalBill.patient.id})">{{vm.finalBill.patient.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="final-bill-detail.edit({id:vm.finalBill.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

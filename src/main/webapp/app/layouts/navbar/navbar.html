@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
                 <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
-                <span>Clinic</span> <span class="navbar-version">v{{VERSION}}</span>
+                <span>Clinic Management</span><!-- <span class="navbar-version">v{{VERSION}}</span>-->
             </a>
         </div>
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
@@ -110,6 +110,18 @@
                                     <span>Clinical Test</span>
                                 </a>
                             </li>
+                        <!--<li ui-sref-active="active" has-any-authority="ROLE_ADMIN">
+                                <a ui-sref="firoj" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span>Firoj</span>
+                                </a>
+                            </li>
+                        <li ui-sref-active="active">
+                                <a ui-sref="firoj" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span>Firoj</span>
+                                </a>
+                            </li>-->
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                 </li>
